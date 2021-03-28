@@ -22,7 +22,6 @@ router.post("/api/workouts", (req, res) => {
     day: Date.now()
   })
     .then(newWorkout => {
-      console.log("o am the cretead worrkout: ", newWorkout);
       res.json(newWorkout);
     })
     .catch(err => res.json(err));
