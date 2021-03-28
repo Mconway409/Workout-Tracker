@@ -9,9 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/fitness',
   {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false
+
   }
 );
 
